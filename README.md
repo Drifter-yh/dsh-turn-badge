@@ -3,6 +3,7 @@
 [English](README.md) | [简体中文](README.zh-CN.md)
 
 [![CI](https://github.com/Drifter-yh/dsh-turn-badge/actions/workflows/ci.yml/badge.svg)](https://github.com/Drifter-yh/dsh-turn-badge/actions/workflows/ci.yml)
+[![npm](https://img.shields.io/npm/v/dsh-turn-badge)](https://www.npmjs.com/package/dsh-turn-badge)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![dsh](https://img.shields.io/badge/dsh-0.2.2--rc.1-4D6BFE)](https://github.com/deepseek-ai/deepseek-harness)
 
@@ -34,14 +35,15 @@ sessions by default, and counts distinct sessions rather than turns.
 
 ## Install
 
-The package is a normal DSH client plugin. Pick one:
+The package is published on npm as `dsh-turn-badge@0.1.0`; the same code is also
+installable straight from GitHub.
 
 ```bash
-# From GitHub (works without npm)
-dsh plugin --profile <your-profile> add github:Drifter-yh/dsh-turn-badge
-
-# From npm, once the package is published
+# From npm
 dsh plugin --profile <your-profile> add dsh-turn-badge
+
+# From GitHub (identical source)
+dsh plugin --profile <your-profile> add github:Drifter-yh/dsh-turn-badge
 ```
 
 Some builds also expose a plugin registry under **Settings → Plugins**.

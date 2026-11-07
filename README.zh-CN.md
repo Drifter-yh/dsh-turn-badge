@@ -3,6 +3,7 @@
 [English](README.md) | [简体中文](README.zh-CN.md)
 
 [![CI](https://github.com/Drifter-yh/dsh-turn-badge/actions/workflows/ci.yml/badge.svg)](https://github.com/Drifter-yh/dsh-turn-badge/actions/workflows/ci.yml)
+[![npm](https://img.shields.io/npm/v/dsh-turn-badge)](https://www.npmjs.com/package/dsh-turn-badge)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![dsh](https://img.shields.io/badge/dsh-0.2.2--rc.1-4D6BFE)](https://github.com/deepseek-ai/deepseek-harness)
 
@@ -30,14 +31,14 @@ Harness 经常跑长任务。你切到别的窗口以后，任务完成只是侧
 
 ## 安装
 
-这是一个普通的 DSH 客户端插件，三种方式任选：
+包已经发布到 npm（`dsh-turn-badge@0.1.0`），也可以直接从 GitHub 安装。
 
 ```bash
-# 从 GitHub 安装（不需要 npm 发布）
-dsh plugin --profile <你的 profile> add github:Drifter-yh/dsh-turn-badge
-
-# 从 npm 安装（包发布后）
+# 从 npm 安装
 dsh plugin --profile <你的 profile> add dsh-turn-badge
+
+# 从 GitHub 安装（同一份代码）
+dsh plugin --profile <你的 profile> add github:Drifter-yh/dsh-turn-badge
 ```
 
 部分版本也可以在 **Settings → Plugins** 里安装。
