@@ -1,0 +1,7 @@
+# dsh-turn-badge bundle patch
+#
+# The host half only marks this package as active so that client-modules
+# publishes its `dsh.client` bundle. All work happens in the browser half.
+- insert:
+    - id: turn-badge
+      name: 'dsh-turn-badge'

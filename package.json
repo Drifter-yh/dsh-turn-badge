@@ -1,0 +1,75 @@
+{
+  "name": "dsh-turn-badge",
+  "version": "0.1.0",
+  "description": "System-level turn-finished alerts for DeepSeek Harness: native notification, app-icon badge and title dot on Windows and macOS.",
+  "author": "Drifter-yh",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Drifter-yh/dsh-turn-badge.git"
+  },
+  "homepage": "https://github.com/Drifter-yh/dsh-turn-badge#readme",
+  "bugs": {
+    "url": "https://github.com/Drifter-yh/dsh-turn-badge/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "install.mjs",
+    "uninstall.mjs",
+    "README.md",
+    "README.zh-CN.md",
+    "LICENSE",
+    "CHANGELOG.md",
+    "SECURITY.md",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "notification",
+    "badge",
+    "turn-end",
+    "taskbar",
+    "dock",
+    "codex"
+  ],
+  "scripts": {
+    "check": "node --check index.js && node --check client.js",
+    "test": "node --test test/plugin.test.mjs",
+    "pack:check": "npm pack --dry-run"
+  },
+  "engines": {
+    "dsh": ">=0.2.2-rc.1 <0.2.3-0"
+  },
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    },
+    "compatibility": {
+      "dsh": ">=0.2.2-rc.1 <0.2.3-0",
+      "profiles": [
+        "web",
+        "desktop"
+      ]
+    }
+  }
+}
