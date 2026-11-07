@@ -166,6 +166,12 @@ npm run pack:check
 打 tag 后 CI 会创建 GitHub Release（`.github/workflows/release.yml`）；只有仓库配置了
 `NPM_TOKEN` secret 才会同时发布到 npm，所以没有 token 时 tag 仍能正常出 Release。
 
+手动发布时强制使用公共 registry（有些机器默认是镜像）：
+
+```bash
+npm publish --access public --registry https://registry.npmjs.org
+```
+
 ## 许可证
 
 MIT —— 见 [LICENSE](LICENSE)。第三方声明见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。

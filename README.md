@@ -177,6 +177,12 @@ is no build step. Releases are created from CI on tag push
 (`.github/workflows/release.yml`). npm publishing runs only when the repository has an
 `NPM_TOKEN` secret, so a tag can still produce a GitHub Release without one.
 
+For a manual publish, force the public registry (some machines default to a mirror):
+
+```bash
+npm publish --access public --registry https://registry.npmjs.org
+```
+
 ## License
 
 MIT — see [LICENSE](LICENSE). Third-party notices: [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
